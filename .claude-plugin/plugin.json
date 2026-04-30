@@ -1,0 +1,12 @@
+{
+  "name": "kde-plasma",
+  "version": "1.0.0",
+  "description": "KDE Plasma (Wayland) runtime utilities — KWin scripting, plasmoid management, panel layout, virtual desktops & activities, KGlobalAccel shortcuts, theme/look-and-feel switching, KDE Connect, Klipper, Baloo, kwriteconfig, qdbus introspection. Complements generic Linux desktop-management plugins with Plasma-specific ops.",
+  "author": {
+    "name": "Daniel Rosehill",
+    "url": "https://github.com/danielrosehill"
+  },
+  "repository": "https://github.com/danielrosehill/Claude-KDE-Plasma-Plugin",
+  "license": "MIT",
+  "keywords": ["kde", "plasma", "kwin", "wayland", "linux", "desktop"]
+}
