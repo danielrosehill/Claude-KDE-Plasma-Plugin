@@ -1,7 +1,7 @@
 {
   "name": "kde-plasma",
-  "version": "1.0.0",
-  "description": "KDE Plasma (Wayland) runtime utilities — KWin scripting, plasmoid management, panel layout, virtual desktops & activities, KGlobalAccel shortcuts, theme/look-and-feel switching, KDE Connect, Klipper, Baloo, kwriteconfig, qdbus introspection. Complements generic Linux desktop-management plugins with Plasma-specific ops.",
+  "version": "0.2.0",
+  "description": "WORK IN PROGRESS — KDE Plasma (Wayland) runtime utilities. The desktop-environment half of a distro × DE pairing: KWin scripting, plasmoid management, panel layout, virtual desktops & activities, KGlobalAccel shortcuts, theme/look-and-feel switching, KDE Connect, Klipper, Baloo, kwriteconfig, qdbus introspection. Pairs with a distro-layer plugin (packages, services, logs) rather than duplicating it. Most skills are unverified against a live session; global-shortcut writes are known not to apply on Plasma 6 Wayland.",
   "author": {
     "name": "Daniel Rosehill",
     "url": "https://github.com/danielrosehill"
