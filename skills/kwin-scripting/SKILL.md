@@ -49,9 +49,22 @@ $QD org.kde.KWin /KWin reconfigure
 ### Load a one-shot script (without installing)
 
 ```bash
-$QD org.kde.KWin /Scripting loadScript /path/to/script.js
-$QD org.kde.KWin /Scripting/Script<N> run
+ID=$($QD org.kde.KWin /Scripting org.kde.kwin.Scripting.loadScript /path/to/script.js my-oneshot)
+$QD org.kde.KWin /Scripting/Script$ID org.kde.kwin.Script.run
+$QD org.kde.KWin /Scripting org.kde.kwin.Scripting.unloadScript my-oneshot
 ```
+
+Verified on Plasma 6.6.6 Wayland, 2026-10-19:
+
+- Pass a plugin name and unload by it afterwards. Reloading the same name while it is
+  still loaded fails.
+- `loadScript` is overloaded `(s)` and `(ss)`. `qdbus6` resolves it. dbus-python's
+  introspecting proxy picks `(s)` and fails with *"Fewer items found in D-Bus signature
+  than in Python arguments"*. Call it with an explicit `"ss"` signature
+  (`bus.call_blocking(..., "loadScript", "ss", (path, name))`).
+- `print()` output appears in the user journal as `js: <text>`. Read it with
+  `journalctl --user --since "-10s" -o cat | grep <marker>`. There is no D-Bus return
+  value, so put a unique marker in what you print.
 
 ## Notes
 

@@ -56,7 +56,7 @@ Present today. Maturity is honest, not aspirational.
 | `kwin-scripting` | List / install / load / remove KWin scripts via `kpackagetool6` + `org.kde.KWin` D-Bus | Unverified |
 | `plasmoid-manage` | List, add, remove, configure Plasma widgets on panels and desktop | Unverified |
 | `panel-layout-backup` | Back up / restore panel layouts (`plasma-org.kde.plasma.desktop-appletsrc` + companions) | Unverified |
-| `virtual-desktops-activities` | Create, rename, switch, remove virtual desktops and KActivities | Unverified |
+| `virtual-desktops-activities` | Create, rename, switch, remove virtual desktops and KActivities | Desktop D-Bus calls verified 2026-10-19 |
 | `keyboard-shortcuts` | Inspect and edit KGlobalAccel global shortcuts | **Partly broken** |
 | `theme-switch` | Look-and-feel packages, colour schemes, icon/cursor themes, GTK theming via `plasma-apply-*` | Unverified |
 | `screen-config-save` / `screen-config-apply` | Save and apply multi-monitor layouts via `kscreen-doctor` | Unverified |
