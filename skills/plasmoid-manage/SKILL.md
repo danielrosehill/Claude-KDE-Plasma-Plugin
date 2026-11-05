@@ -5,7 +5,7 @@ description: List, install, remove, and add Plasma widgets (plasmoids) to panels
 
 # Plasmoid Management
 
-Runtime management of Plasma widgets. For *developing* new plasmoids, use the `kde-plasmoid-dev` plugin instead.
+Runtime management of Plasma widgets. For *developing* new plasmoids, use the `kde-plasmoid-dev` skill in this plugin instead.
 
 ## Tooling
 

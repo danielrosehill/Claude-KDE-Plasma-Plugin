@@ -28,7 +28,7 @@ paired with whichever distro plugin matches the machine.
 ```
   distro layer          ×          DE layer          =   the machine
   ────────────────                 ────────              ───────────
-  desktop-manager                  kde-plasma           Ubuntu + Plasma 6
+  ubuntu-admin                     kde-plasma           Ubuntu + Plasma 6
   linux-debugging                  (this plugin)
   linux-system-optimisation        …a gnome-shell        Fedora + GNOME
                                      equivalent
@@ -38,14 +38,13 @@ Companion plugins in the same marketplace that sit on the distro side:
 
 | Plugin | Layer | Covers |
 | --- | --- | --- |
-| `desktop-manager` | distro | Machine profiling, packages, config application, hardware, services |
+| `ubuntu-admin` | distro | Machine profiling, packages, config application, hardware, services |
 | `linux-debugging` | distro | journald, boot logs, kdump, crash/freeze analysis |
 | `linux-system-optimisation` | distro | CPU/GPU/disk benchmarks, governors, sysctl, disk usage |
-| `kde-plasmoid-dev` | DE (build-time) | Writing Plasma widgets — QML scaffolding, packaging, 5→6 migration |
-| **`kde-plasma`** | **DE (run-time)** | **This plugin — operating the Plasma desktop you already have** |
+| **`kde-plasma`** | **DE** | **This plugin — operating the Plasma desktop you already have, and building widgets for it** |
 
-The split against `kde-plasmoid-dev` is build-time versus run-time: that plugin
-*makes* widgets, this one *drives* the desktop.
+Building widgets lives here too: the `kde-plasmoid-dev` skill *makes* widgets, the
+rest of the plugin *drives* the desktop.
 
 ## Skills
 
@@ -158,7 +157,6 @@ claude plugins install ./Claude-KDE-Plasma-Plugin --scope project
 
 Runtime *operation* of an installed Plasma desktop. Explicitly out of scope:
 
-- Building Plasma widgets → `kde-plasmoid-dev`.
 - Anything below the DE — packages, services, kernel, filesystem → the distro-layer
   plugins listed above.
 - GUI automation (clicking things, screenshots, accessibility tree). If you need
