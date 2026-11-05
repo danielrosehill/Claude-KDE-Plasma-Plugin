@@ -170,3 +170,7 @@ Runtime *operation* of an installed Plasma desktop. Explicitly out of scope:
 ## License
 
 MIT — see [LICENSE](LICENSE).
+
+## Folded in
+
+- `kde-plasmoid-dev`, retired 2026-11-05: skills kde-plasmoid-dev, build-plasmoid-file, install-kde-dev-tools, mirror-to-opencode.
