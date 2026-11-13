@@ -70,4 +70,4 @@ Verified on Plasma 6.6.6 Wayland, 2026-10-19:
 
 - After install/remove, reload KWin's script registry: `$QD org.kde.KWin /KWin reconfigure`.
 - Logs: `journalctl --user -u plasma-kwin_wayland.service -f` or `~/.xsession-errors` on X11.
-- Daniel's data dir for any scratch scripts: `${CLAUDE_USER_DATA:-${XDG_DATA_HOME:-$HOME/.local/share}/claude-plugins}/kde-plasma/data/kwin-scripts/`.
+- The data dir for any scratch scripts: `${CLAUDE_USER_DATA:-${XDG_DATA_HOME:-$HOME/.local/share}/claude-plugins}/kde-plasma/data/kwin-scripts/`.

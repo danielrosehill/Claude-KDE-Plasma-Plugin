@@ -5,6 +5,10 @@ description: Write or update a password / map / binary entry in KWallet. Creates
 
 # KWallet Write
 
+## 1. Load your settings
+
+Read `kwallet-write.md` from `$CLAUDE_USER_DATA/kde-plasma/`, else `~/.claude-user-data/kde-plasma/`, if it exists; its notes win over the defaults below.
+
 ## Open
 
 ```bash
@@ -52,6 +56,6 @@ qdbus org.kde.kwalletd6 /modules/kwalletd6 close "$HANDLE" false "$APPID"
 ## Notes
 
 - Don't put secrets in command-line arguments on shared systems — they show up in `/proc/<pid>/cmdline`. Read into a variable first via `read -s`, then pass.
-- Daniel uses 1Password as the source of truth; KWallet is mainly populated by KDE apps themselves. This skill is for the rare case where a KDE app expects a credential to already exist.
+- KWallet is mainly populated by KDE apps themselves. This skill is for the rare case where a KDE app expects a credential to already exist. If your settings name another source of truth for credentials, follow them.
 
 > **Stub skill** — basic write is wired. Idempotent updates, batch import from 1Password / file, and dry-run are TODO.
